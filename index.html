@@ -5,7 +5,123 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Daniel Jehd Franco — Curriculum Vitae</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --bg: #f4f1ef;
+        --paper: #ffffff;
+        --accent: #3e4247;
+        --sidebar: #efe7e3;
+        --muted: #6f6b66;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        font-family: 'Montserrat', Arial, sans-serif;
+        background: var(--bg);
+        margin: 0;
+        color: #222;
+      }
+      .page {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .mast {
+        width: 100%;
+        background: var(--accent);
+        color: #fff;
+        padding: 72px 0 12px;
+        position: relative;
+      }
+      .mast-inner {
+        max-width: 920px;
+        margin: 0 auto;
+        padding: 0 24px;
+        text-align: center;
+      }
+      .mast-title h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: 56px;
+        margin: 0;
+        color: #fff;
+        letter-spacing: 0.5px;
+      }
+      .subtitle { font-size: 15px; margin-top: 6px; color: #e6e7e8; }
+      .mast-notch { height: 56px; background: var(--sidebar); position: relative; }
+      .mast-notch::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 920px;
+        height: 56px;
+        background: var(--sidebar);
+        clip-path: polygon(0 100%, 22% 0, 78% 0, 100% 100%);
+      }
+
+      .layout {
+        display: flex;
+        max-width: 980px;
+        width: 100%;
+        margin: 18px auto 40px;
+        background: var(--paper);
+        box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+        border-radius: 6px;
+        overflow: hidden;
+      }
+      .left-col { width: 300px; background: var(--sidebar); color: #222; padding: 36px; }
+      .right-col { flex: 1; padding: 48px 56px; }
+      .section-title { font-weight: 700; margin: 0 0 14px; font-size: 16px; }
+      .info-list { list-style: none; padding: 0; margin: 0 0 14px; }
+      .info-list li { margin: 10px 0; color: var(--muted); font-size: 14px; }
+      .info-list li strong { display: inline-block; width: 78px; color: #222; font-weight: 600; }
+      .info-list li span { color: var(--muted); }
+      .photo-wrap { display: flex; flex-direction: column; align-items: center; margin-bottom: 18px; }
+      .photo { width: 96px; height: 96px; border-radius: 50%; background: #ddd; object-fit: cover; }
+      .job-title { margin-top: 8px; font-weight: 600; color: #6f6b66; }
+      .edu { font-size: 14px; margin: 0; color: #222; }
+      .dates { color: var(--muted); font-size: 12px; }
+      .skills { list-style: none; padding: 0; margin: 0; }
+      .skills li { margin: 8px 0; color: #222; font-size: 14px; }
+      .left-col a { color: #1b73af; text-decoration: underline; }
+
+      .right-col h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 22px;
+        margin: 0 0 12px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #e9e7e6;
+      }
+      .right-col h3 { font-size: 16px; margin: 8px 0; }
+      .right-col p, .right-col li { color: #333; line-height: 1.75; font-size: 15px; }
+      .work ul, .courses ul, .hobbies ul { margin-left: 18px; }
+      .work ul { margin-top: 6px; }
+      .watermark {
+        position: fixed;
+        right: 80px;
+        top: 220px;
+        color: rgba(0, 0, 0, 0.04);
+        font-size: 140px;
+        font-weight: 700;
+        transform: rotate(-20deg);
+        pointer-events: none;
+      }
+
+      @media (max-width: 920px) {
+        .mast-title h1 { font-size: 34px; }
+        .layout { flex-direction: column; }
+        .left-col { width: 100%; }
+        .right-col { padding: 20px; }
+        .mast-notch::before { width: 100%; }
+        .watermark { display: none; }
+        .mast { padding: 40px 0 8px; }
+        .mast-notch { height: 36px; }
+      }
+    </style>
   </head>
   <body>
     <div class="page">
